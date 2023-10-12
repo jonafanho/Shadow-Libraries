@@ -1,0 +1,49 @@
+plugins {
+	id "java"
+	id "maven-publish"
+	id "com.github.johnrengelman.shadow" version "+" apply false
+}
+
+group "org.mtr.libraries"
+version rootProject.properties.version
+
+subprojects {
+	apply plugin: "java"
+	apply plugin: "maven-publish"
+	apply plugin: "com.github.johnrengelman.shadow"
+
+	repositories {
+		mavenCentral()
+	}
+
+	configurations {
+		shadowImplementation
+		implementation.extendsFrom shadowImplementation
+	}
+
+	java {
+		toolchain {
+			languageVersion.set(JavaLanguageVersion.of(8))
+		}
+		withSourcesJar()
+		withJavadocJar()
+	}
+
+	shadowJar {
+		configurations = [project.configurations.shadowImplementation]
+		archiveClassifier.set("")
+		enableRelocation true
+		relocationPrefix "org.mtr.libraries"
+	}
+
+	publishing {
+		publications {
+			maven(MavenPublication) {
+				groupId project.group
+				artifactId project.name
+				version project.version
+				from components.java
+			}
+		}
+	}
+}

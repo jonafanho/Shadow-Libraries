@@ -1,0 +1,5 @@
+dependencies {
+	shadowImplementation "com.google.code.gson:gson:+"
+	shadowImplementation "it.unimi.dsi:fastutil:+"
+	shadowImplementation "org.msgpack:msgpack-core:+"
+}

@@ -1,0 +1,4 @@
+rootProject.name = "Shadow-Libraries"
+
+include("util")
+include("net")
