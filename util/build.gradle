@@ -1,5 +1,5 @@
 dependencies {
-	shadowImplementation "com.google.code.gson:gson:+"
-	shadowImplementation "it.unimi.dsi:fastutil:+"
-	shadowImplementation "org.msgpack:msgpack-core:+"
+	shadowCompileOnly "com.google.code.gson:gson:+"
+	shadowCompileOnly "it.unimi.dsi:fastutil:+"
+	shadowCompileOnly "org.msgpack:msgpack-core:+"
 }

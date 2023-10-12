@@ -1,4 +1,4 @@
 dependencies {
-	shadowImplementation "com.corundumstudio.socketio:netty-socketio:+"
-	shadowImplementation "io.socket:socket.io-client:+"
+	shadowCompileOnly "com.corundumstudio.socketio:netty-socketio:+"
+	shadowCompileOnly "io.socket:socket.io-client:+"
 }

@@ -17,8 +17,8 @@ subprojects {
 	}
 
 	configurations {
-		shadowImplementation
-		implementation.extendsFrom shadowImplementation
+		shadowCompileOnly
+		compileOnly.extendsFrom shadowCompileOnly
 	}
 
 	java {
@@ -30,7 +30,7 @@ subprojects {
 	}
 
 	shadowJar {
-		configurations = [project.configurations.shadowImplementation]
+		configurations = [project.configurations.shadowCompileOnly]
 		archiveClassifier.set("")
 		enableRelocation true
 		relocationPrefix "org.mtr.libraries"
