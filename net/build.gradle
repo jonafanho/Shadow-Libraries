@@ -1,4 +1,7 @@
 dependencies {
-	shadowCompileOnly "com.corundumstudio.socketio:netty-socketio:+"
-	shadowCompileOnly "io.socket:socket.io-client:+"
+	shadowCompileOnly "com.squareup.okhttp3:okhttp:+"
+	shadowCompileOnly "org.eclipse.jetty:jetty-server:9.+"
+	shadowCompileOnly "org.eclipse.jetty:jetty-servlet:9.+"
+	shadowCompileOnly "org.eclipse.jetty:jetty-util:9.+"
+	shadowCompileOnly "javax.servlet:javax.servlet-api:+"
 }
