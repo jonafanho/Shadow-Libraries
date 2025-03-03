@@ -1,5 +1,3 @@
 dependencies {
-	shadowCompileOnly "com.google.code.gson:gson:+"
-	shadowCompileOnly "it.unimi.dsi:fastutil:+"
 	shadowCompileOnly "org.msgpack:msgpack-core:+"
 }
